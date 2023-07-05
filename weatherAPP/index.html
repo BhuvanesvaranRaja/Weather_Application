@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <script
+      src="https://kit.fontawesome.com/fa0ddea890.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="icon" href="./assets/titleicon.webp" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- header/input start -->
+      <div class="header">
+        <h1 class="text-center TopTitle">WEATHER</h1>
+        <div class="form-container">
+          <form class="d-flex mt-5 w-50" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              id="city-input"
+              placeholder="Enter Destination ..."
+              aria-label="Search"
+            />
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <!-- output -->
+      <div class="result mt-5" id="result">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 bg-success">
+              <div
+                class="d-flex justify-content-between align-items-center text-white location"
+              >
+                <h4>TODAY</h4>
+                <h4>
+                  <i
+                    class="fa-solid fa-location-dot"
+                    style="color: #e6e9ef"
+                  ></i>
+                  <span id="location">N/A</span>
+                </h4>
+              </div>
+            </div>
+            <!-- second -->
+            <div class="col-4 weather-leftwrapper">
+              <div>
+                <h6>
+                  <span id="wind">NA</span>
+                  m/s
+                  <i class="fa-sharp fa-solid fa-wind fa-fade"></i>
+                </h6>
+              </div>
+              <div>
+                <h6>
+                  <span id="max-temp">N/A</span> °C&nbsp;<i
+                    class="fa-solid fa-temperature-high fa-fade"
+                  ></i>
+                </h6>
+              </div>
+              <div>
+                <h6>
+                  <span id="min-temp">N/A</span>
+                  °C &nbsp;<i class="fa-solid fa-temperature-low fa-fade"></i>
+                </h6>
+              </div>
+            </div>
+            <div
+              class="col-8 d-flex flex-column justify-content-around weather-rightwrapper"
+            >
+              <div class="d-flex justify-content-around">
+                <h1>
+                  <span id="temperature" class="text-danger">N/A</span> °C
+                </h1>
+                <h1>
+                  <span id="country" class="text-warning">N/A</span
+                  ><i class="fa-regular fa-timer"></i>
+                </h1>
+              </div>
+              <div>
+                <h1 class="text-center">
+                  "
+                  <span
+                    class="text-center text-uppercase text-primary"
+                    id="desc"
+                    >N/A</span
+                  >
+                  "
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="./weather.js"></script>
+</html>
